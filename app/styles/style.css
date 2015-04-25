@@ -2,12 +2,22 @@
     width: 100%;
 }
 
+.session-details table thead td,
 .session-list table thead td {
     background: skyblue no-repeat;
     font-size: 14px;
     font-weight: 600;
 }
 
+.session-details table {
+    width: 50%;
+}
+
 .fill {
     background: red no-repeat;
+}
+
+#map {
+    height:420px;
+    width:600px;
 }
