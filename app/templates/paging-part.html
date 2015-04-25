@@ -1,8 +1,8 @@
 
     <nav>
         <ul class="pager">
-            <li><a href ng-click="previousPage()">Previous</a></li>
+            <li><a href="#/page/{{currentPage}}" ng-click="previousPage()">Previous</a></li>
             <li><a href>{{currentPage}}</a></li>
-            <li><a href ng-click="nextPage()">Next</a></li>
+            <li><a href="#/page/{{currentPage}}" ng-click="nextPage()">Next</a></li>
         </ul>
     </nav>

@@ -11,15 +11,18 @@ sessionsApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/', {
-                //redirectTo: '/page/1',
                 templateUrl: 'templates/session-list.html',
                 controller: 'SessionsController'
             }).
-            when('/phones/:phoneId', {
-                //templateUrl: 'partials/phone-detail.html',
-                //controller: 'PhoneDetailCtrl'
+            when('/page/:pageNum', {
+                templateUrl: 'templates/session-list.html',
+                controller: 'SessionsController'
+            }).
+            when('/page/:pageNum/details/:id', {
+                templateUrl: 'templates/session-details.html',
+                controller: 'SessionsDetailsController'
             }).
             otherwise({
-                //redirectTo: '/phones'
+                redirectTo: '/'
             });
     }]);

@@ -7,3 +7,7 @@
     font-size: 14px;
     font-weight: 600;
 }
+
+.fill {
+    background: red no-repeat;
+}

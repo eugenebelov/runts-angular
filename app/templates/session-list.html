@@ -12,23 +12,26 @@
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <td>id</td>
-                    <td>start_time</td>
-                    <td>end_time</td>
-                    <td>duration</td>
-                    <td>distance</td>
-                    <td>encoded_trace</td>
-                    <td>sport_type_id</td>
+                    <td><a href ng-click="sortBy('id')">id</a></td>
+                    <td><a href ng-click="sortBy('start_time')">start_time</a></td>
+                    <td><a href ng-click="sortBy('end_time')">end_time</a></td>
+                    <td><a href ng-click="sortBy('duration')">duration</a></td>
+                    <td><a href ng-click="sortBy('distance')">distance</a></td>
+                    <td><a href ng-click="sortBy('encoded_trace')">encoded_trace</a></td>
+                    <td><a href ng-click="sortBy('sport_type_id')">sport_type_id</a></td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="session in sessionsList">
-                    <td>{{session.id}}</td>
+                    <td><a href="#/page/{{currentPage}}/details/{{session.id}}">{{session.id}}</a></td>
                     <td>{{session.start_time}}</td>
                     <td>{{session.end_time}}</td>
                     <td>{{session.duration}}</td>
                     <td>{{session.distance}}</td>
-                    <td>{{session.encoded_trace}}</td>
+                    <td>
+                        <span class="glyphicon glyphicon-ok" ng-show="{{session.hasTrace}}"></span>
+                        <span class="glyphicon glyphicon-remove" ng-hide="{{session.hasTrace}}"></span>
+                    </td>
                     <td>{{session.sport_type_id}}</td>
                 </tr>
                 </tbody>

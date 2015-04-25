@@ -1,0 +1,35 @@
+<div class="session-list">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a href="#/page/{{currentPage}}">Go back to Sessions</a>
+            <br/>
+            <p>Sessions details</p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>id</td>
+                    <td>start_time</td>
+                    <td>end_time</td>
+                    <td>duration</td>
+                    <td>distance</td>
+                    <td>encoded_trace</td>
+                    <td>sport_type_id</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{sessionsDetails.id}}</td>
+                    <td>{{sessionsDetails.start_time}}</td>
+                    <td>{{sessionsDetails.end_time}}</td>
+                    <td>{{sessionsDetails.duration}}</td>
+                    <td>{{sessionsDetails.distance}}</td>
+                    <td>
+                        <!--map!-->
+                    </td>
+                    <td>{{sessionsDetails.sport_type_id}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

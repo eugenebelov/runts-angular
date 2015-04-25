@@ -7,8 +7,7 @@ var sessionDirectives = angular.module('sessionDirectives', ['sessionsController
 sessionDirectives.directive('sort', function() {
     return {
         restrict: 'E',
-        templateUrl: 'templates/sort-part.html',
-        controller: 'SessionsController'
+        templateUrl: 'templates/sort-part.html'
     };
 });
 
@@ -16,7 +15,6 @@ sessionDirectives.directive('paging', function() {
     return {
         restrict: 'E',
         templateUrl: 'templates/paging-part.html',
-        controller: 'SessionsController',
         scope: {
             currentPage: '=page',
             'previousPage': '&onPrevHandler',
