@@ -1,0 +1,35 @@
+<sort class="sort-settings"></sort>
+
+<div class="session-list">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>Sessions list</p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <td>id</td>
+                    <td>start_time</td>
+                    <td>end_time</td>
+                    <td>duration</td>
+                    <td>distance</td>
+                    <td>encoded_trace</td>
+                    <td>sport_type_id</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="session in sessionsList">
+                    <td>{{session.id}}</td>
+                    <td>{{session.start_time}}</td>
+                    <td>{{session.end_time}}</td>
+                    <td>{{session.duration}}</td>
+                    <td>{{session.distance}}</td>
+                    <td>{{session.encoded_trace}}</td>
+                    <td>{{session.sport_type_id}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<paging class="pagination"></paging>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="sessionsApp">
 <head lang="en">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
 
 </head>
 <body>
@@ -18,70 +20,15 @@
 <div class="container">
     <h3>Runtastic Angular test</h3>
 
-    <div class="sort-settings">
-        <p>Sort settings</p>
-        <select name="sortSelect" id="sort">
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
-        </select>
-    </div>
-    <br/>
-    <div class="session-list">
-        <p>Sessions list</p>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> id</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> start_time</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> end_time</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> duration</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> distance</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> encoded_trace</td>
-                    <td><span class="glyphicon glyphicon-sort-by-alphabet"></span> sport_type_id</td>
-                </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>id</td>
-                <td>start_time</td>
-                <td>end_time</td>
-                <td>duration</td>
-                <td>distance</td>
-                <td>encoded_trace</td>
-                <td>sport_type_id</td>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td>start_time</td>
-                <td>end_time</td>
-                <td>duration</td>
-                <td>distance</td>
-                <td>encoded_trace</td>
-                <td>sport_type_id</td>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td>start_time</td>
-                <td>end_time</td>
-                <td>duration</td>
-                <td>distance</td>
-                <td>encoded_trace</td>
-                <td>sport_type_id</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <div ng-view></div>
 
-    <div class="pagination">
-        <nav>
-            <ul class="pager">
-                <li><a href="#">Previous</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
 </div>
+
+
+<script src="scripts/sessionsApp.js"></script>
+<script src="scripts/controllers.js"></script>
+<script src="scripts/services.js"></script>
+<script src="scripts/directives.js"></script>
 
 </body>
 </html>

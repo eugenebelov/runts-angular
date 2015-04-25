@@ -1,3 +1,9 @@
 .pagination {
     width: 100%;
 }
+
+.session-list table thead td {
+    background: skyblue no-repeat;
+    font-size: 14px;
+    font-weight: 600;
+}
