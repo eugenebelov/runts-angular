@@ -5,20 +5,22 @@
 var sessionsControllers = angular.module('sessionsController', []);
 
 sessionsControllers.controller('SessionsController', function ($scope, RunSession) {
-    $scope.runSessions = RunSession.query().$promise.then(
+    $scope.sessionsList = {};
+    $scope.currentPage = 1;
+
+    RunSession.query().$promise.then(
         function( value ) {
             $scope.sessionsList = value.run_sessions;
         },
         function( error ){/*error*/}
     );
 
-    //$scope.runSessions.then(function(data) {
-    //    console.log(data);
-    //})
+    $scope.prevPageHandler = function() {
+        if( $scope.currentPage > 1) $scope.currentPage--;
+    };
 
-})
-
-sessionsControllers.controller('SortController', function ($scope, RunSession) {
-
+    $scope.nextPageHandler = function() {
+        $scope.currentPage++;
+    }
 
 });

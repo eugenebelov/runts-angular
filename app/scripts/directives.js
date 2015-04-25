@@ -16,6 +16,11 @@ sessionDirectives.directive('paging', function() {
     return {
         restrict: 'E',
         templateUrl: 'templates/paging-part.html',
-        controller: 'SessionsController'
+        controller: 'SessionsController',
+        scope: {
+            currentPage: '=page',
+            'previousPage': '&onPrevHandler',
+            'nextPage': '&onNextHandler'
+        }
     };
-})
+});
