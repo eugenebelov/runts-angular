@@ -5,37 +5,37 @@
         on-prev-handler="prevPageHandler()"
         on-next-handler="nextPageHandler()"></paging>
 
-<div class="session-list">
+
     <div class="panel panel-default">
-        <div class="panel-body">
-            <p>Sessions list</p>
-            <table class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <td><a href ng-click="sortBy('id'); reverse=!reverse">id</a></td>
-                    <td><a href ng-click="sortBy('start_time'); reverse=!reverse">start_time</a></td>
-                    <td><a href ng-click="sortBy('end_time'); reverse=!reverse">end_time</a></td>
-                    <td><a href ng-click="sortBy('duration'); reverse=!reverse">duration</a></td>
-                    <td><a href ng-click="sortBy('distance'); reverse=!reverse">distance</a></td>
-                    <td><a href ng-click="sortBy('hasTrace'); reverse=!reverse">encoded_trace</a></td>
-                    <td><a href ng-click="sortBy('sport_type_id'); reverse=!reverse">sport_type_id</a></td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="session in sessionsList | orderBy:predicate:reverse">
-                    <td><a href="#/page/{{currentPage}}/details/{{session.id}}">{{session.id}}</a></td>
-                    <td>{{session.start_time}}</td>
-                    <td>{{session.end_time}}</td>
-                    <td>{{session.duration}}</td>
-                    <td>{{session.distance}}</td>
-                    <td>
-                        <span class="glyphicon glyphicon-ok" ng-show="{{session.hasTrace}}"></span>
-                        <span class="glyphicon glyphicon-remove" ng-hide="{{session.hasTrace}}"></span>
-                    </td>
-                    <td>{{session.sport_type_id}}</td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="panel-heading">Sessions list</div>
+
+        <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <td><a href ng-click="sortBy('id'); reverse=!reverse">id</a></td>
+                <td><a href ng-click="sortBy('start_time'); reverse=!reverse">start_time</a></td>
+                <td><a href ng-click="sortBy('end_time'); reverse=!reverse">end_time</a></td>
+                <td><a href ng-click="sortBy('duration'); reverse=!reverse">duration</a></td>
+                <td><a href ng-click="sortBy('distance'); reverse=!reverse">distance</a></td>
+                <td><a href ng-click="sortBy('hasTrace'); reverse=!reverse">encoded_trace</a></td>
+                <td><a href ng-click="sortBy('sport_type_id'); reverse=!reverse">sport_type_id</a></td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="session in sessionsList | orderBy:predicate:reverse">
+                <td><a href="#/page/{{currentPage}}/details/{{session.id}}">{{session.id}}</a></td>
+                <td>{{session.start_time}}</td>
+                <td>{{session.end_time}}</td>
+                <td>{{session.duration}}</td>
+                <td>{{session.distance}}</td>
+                <td>
+                    <span class="glyphicon glyphicon-ok" ng-show="{{session.hasTrace}}"></span>
+                    <span class="glyphicon glyphicon-remove" ng-hide="{{session.hasTrace}}"></span>
+                </td>
+                <td>{{session.sport_type_id}}</td>
+            </tr>
+            </tbody>
+        </table>
         </div>
     </div>
-</div>

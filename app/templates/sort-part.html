@@ -1,15 +1,17 @@
 
     <div class="panel panel-default">
         <div class="panel-body">
-            <span>Sort settings </span>
-            <select name="sortOrderSelect" id="sortOrder"
-                    ng-model="selectedSortOrderOption"
-                    ng-options="order as order.label for order in sortOptionsOrderList"></select>
-
-            <span> by </span>
-
-            <select name="sortFieldSelect" id="sortField"
-                    ng-model="selectedSortOption"
-                    ng-options="sort as sort.label for sort in sortOptionsList"></select>
+            <div class="settings">
+                <span>Sort settings </span>
+                <select name="sortOrderSelect" id="sortOrder"
+                        ng-model="selectedSortOrderOption"
+                        ng-options="order as order.label for order in sortOptionsOrderList"></select>
+            </div>
+            <div class="settings">
+                <span> by </span>
+                <select name="sortFieldSelect" id="sortField"
+                        ng-model="selectedSortOption"
+                        ng-options="sort as sort.label for sort in sortOptionsList"></select>
+            </div>
         </div>
     </div>

@@ -13,11 +13,19 @@
     width: 50%;
 }
 
-.fill {
-    background: red no-repeat;
+.settings {
+    float: left;
+    padding-right: 30px;
 }
 
 #map {
-    height:420px;
-    width:600px;
+    height: 450px;
+    width: 100%;
+}
+
+@media only screen and (max-device-width: 300px) {
+    /* STYLES HERE for DEVICES with physical max-screen width of 480px */
+    #map {
+        height:220px;
+    }
 }
